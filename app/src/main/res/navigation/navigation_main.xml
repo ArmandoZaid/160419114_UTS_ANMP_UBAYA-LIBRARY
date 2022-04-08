@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/itemMain">
+
+    <fragment
+        android:id="@+id/itemMain"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/actionRuang"
+            app:destination="@id/ruangFragment" />
+        <action
+            android:id="@+id/actionInfoUbaya"
+            app:destination="@id/infoUbayaFragment" />
+        <action
+            android:id="@+id/actionFAQ"
+            app:destination="@id/FAQFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/itemRekomen"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.RekomenFragment"
+        android:label="fragment_rekomen"
+        tools:layout="@layout/fragment_rekomen" >
+        <action
+            android:id="@+id/actionRekomenBukuDetail"
+            app:destination="@id/bukuDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ruangFragment"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.RuangFragment"
+        android:label="fragment_ruang"
+        tools:layout="@layout/fragment_ruang" >
+        <action
+            android:id="@+id/actionRuangDetail"
+            app:destination="@id/ruangDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bukuDetailFragment"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.BukuDetailFragment"
+        android:label="fragment_buku_detail"
+        tools:layout="@layout/fragment_buku_detail" >
+        <argument
+            android:name="bukuID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoUbayaFragment"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.InfoUbayaFragment"
+        android:label="fragment_info_ubaya"
+        tools:layout="@layout/fragment_info_ubaya" >
+        <action
+            android:id="@+id/actionKembaliInfoHome"
+            app:destination="@id/itemMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/ruangDetailFragment"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.RuangDetailFragment"
+        android:label="fragment_ruang_detail"
+        tools:layout="@layout/fragment_ruang_detail" >
+        <argument
+            android:name="ruangID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.ubaya.a160419114_uts_ubayalibrary.view.FAQFragment"
+        android:label="fragment_f_a_q"
+        tools:layout="@layout/fragment_f_a_q" >
+        <action
+            android:id="@+id/actionKembaliFAQHome"
+            app:destination="@id/itemMain" />
+    </fragment>
+</navigation>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RuangDetailFragment">
+
+    <ImageView
+        android:id="@+id/imageViewRuangDetail"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textNamaRuangDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/calistoga"
+        android:text="Nama Ruang Detail"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRuangDetail"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewRuangDetail" />
+
+    <TextView
+        android:id="@+id/textKapasitasRD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/calistoga"
+        android:text="Kapasitas Orang :"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textNamaRuangDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textNamaRuangDetail" />
+
+    <TextView
+        android:id="@+id/textKapasitasRuangDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/calistoga"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textKapasitasRD"
+        app:layout_constraintTop_toTopOf="@+id/textKapasitasRD" />
+
+    <Button
+        android:id="@+id/buttonPinjamRuangDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="PINJAM RUANG"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textKapasitasRD"
+        app:layout_constraintTop_toBottomOf="@+id/textKapasitasRD" />
+
+    <ProgressBar
+        android:id="@+id/progressBarRuangDetail"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRuangDetail"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewRuangDetail"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRuangDetail"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRuangDetail" />
+</androidx.constraintlayout.widget.ConstraintLayout>

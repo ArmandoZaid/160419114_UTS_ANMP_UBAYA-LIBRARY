@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.BukuDetailFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageBukuDetail"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textNamaBukuDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/calistoga"
+                android:text="Nama Buku Detail"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageBukuDetail" />
+
+            <TextView
+                android:id="@+id/textAuthorDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/calistoga"
+                android:text="Author Buku"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textNamaBukuDetail"
+                app:layout_constraintTop_toBottomOf="@+id/textNamaBukuDetail" />
+
+            <TextView
+                android:id="@+id/textRD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/calistoga"
+                android:text="Rating Buku :"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textAuthorDetail"
+                app:layout_constraintTop_toBottomOf="@+id/textAuthorDetail" />
+
+            <TextView
+                android:id="@+id/textDeskripsi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Dekripsi Buku"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textRD"
+                app:layout_constraintTop_toBottomOf="@+id/textRD" />
+
+            <TextView
+                android:id="@+id/textRatingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/calistoga"
+                android:text="10"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textRD"
+                app:layout_constraintTop_toTopOf="@+id/textRD" />
+
+            <Button
+                android:id="@+id/buttonPinjamDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Pinjam"
+                app:layout_constraintEnd_toEndOf="@+id/textDeskripsi"
+                app:layout_constraintStart_toStartOf="@+id/textDeskripsi"
+                app:layout_constraintTop_toBottomOf="@+id/textDeskripsi" />
+
+            <ProgressBar
+                android:id="@+id/progressLoadingBukuDetail"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageBukuDetail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageBukuDetail"
+                app:layout_constraintTop_toTopOf="@+id/imageBukuDetail" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
